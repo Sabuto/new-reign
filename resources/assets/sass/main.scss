@@ -1,0 +1,123 @@
+@import "susy/sass/susy";
+@import "breakpoint-sass/stylesheets/breakpoint";
+@import "mixins";
+
+$menuColour: rgba(135, 161, 200, 0.99);
+$mainColour: rgba(67, 137, 200, 0.99);
+$barColour: rgba(31, 100, 200, 0.50);
+
+$susy: (
+        global-box-sizing: border-box,
+        use-custom: (rem: true)
+);
+
+@include border-box-sizing;
+
+.container-test {
+  @include container;
+  @include susy-clearfix;
+  background-color: $mainColour;
+}
+
+.ag1 {
+  @include breakpoint(600px) {
+    @include span(2 of 6 last);
+  }
+  @include breakpoint(900px){
+    @include span(2 of 10);
+  }
+}
+
+.ag3 {
+  @include breakpoint(600px) {
+    @include span(2 of 6 last);
+  }
+  @include breakpoint(900px) {
+    @include span(2 of 10 last);
+  }
+}
+
+.ag2 {
+  @include susy-clearfix;
+  background-color: $mainColour;
+  @include breakpoint(600px) {
+    @include span(4 of 6);
+  }
+  @include breakpoint(900px) {
+    @include span(6 of 10);
+  }
+}
+
+html {
+  background-color: $mainColour;
+}
+body {
+  background-color: $mainColour;
+}
+/**
+ * Text Styles
+ */
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+/**
+ * Menu Styling
+ */
+.menu-item  {
+  background-color: $mainColour;
+  margin: {
+    left: 2%;
+    bottom: gutter();
+    right: 2%;
+  }
+  border: 1px solid #ffffff;
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-top: 1.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 1px #808080;
+  }
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 0.5rem;
+    li {
+      text-decoration: underline;
+    }
+  }
+}
+
+.page-heading {
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+  text-align: center;
+  line-height: 1;
+  &::after {
+    content: '';
+    display: block;
+    width: 10%;
+    height: 3px;
+    background: $barColour;
+    margin: 1.5rem auto 0;
+  }
+}
+
+.no-button {
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+.pencil {
+  padding-right: 6px;
+}

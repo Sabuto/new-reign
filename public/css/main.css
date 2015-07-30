@@ -1,0 +1,122 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+.container-test {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(67, 137, 200, 0.99); }
+  .container-test:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .container-test:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+@media (min-width: 600px) {
+  .ag1 {
+    width: 31.03448%;
+    float: right;
+    margin-right: 0; } }
+
+@media (min-width: 900px) {
+  .ag1 {
+    width: 18.36735%;
+    float: left;
+    margin-right: 2.04082%; } }
+
+@media (min-width: 600px) {
+  .ag3 {
+    width: 31.03448%;
+    float: right;
+    margin-right: 0; } }
+
+@media (min-width: 900px) {
+  .ag3 {
+    width: 18.36735%;
+    float: right;
+    margin-right: 0; } }
+
+.ag2 {
+  background-color: rgba(67, 137, 200, 0.99); }
+  .ag2:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  @media (min-width: 600px) {
+    .ag2 {
+      width: 65.51724%;
+      float: left;
+      margin-right: 3.44828%; } }
+  @media (min-width: 900px) {
+    .ag2 {
+      width: 59.18367%;
+      float: left;
+      margin-right: 2.04082%; } }
+
+html {
+  background-color: rgba(67, 137, 200, 0.99); }
+
+body {
+  background-color: rgba(67, 137, 200, 0.99); }
+
+/**
+ * Text Styles
+ */
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem; }
+
+/**
+ * Menu Styling
+ */
+.menu-item {
+  background-color: rgba(67, 137, 200, 0.99);
+  margin-left: 2%;
+  margin-bottom: 5.26316%;
+  margin-right: 2%;
+  border: 1px solid #ffffff; }
+  .menu-item p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-top: 1.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 1px #808080; }
+  .menu-item ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 0.5rem; }
+    .menu-item ul li {
+      text-decoration: underline; }
+
+.page-heading {
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+  text-align: center;
+  line-height: 1; }
+  .page-heading::after {
+    content: '';
+    display: block;
+    width: 10%;
+    height: 3px;
+    background: rgba(31, 100, 200, 0.5);
+    margin: 1.5rem auto 0; }
+
+.no-button {
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent; }
+
+.pencil {
+  padding-right: 6px; }
+
+/*# sourceMappingURL=main.css.map */
