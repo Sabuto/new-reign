@@ -74,6 +74,6 @@ class AdminController extends Controller
     }
 
     public function viewRanks(){
-        $ranks = 
+        $ranks =
     }
 }

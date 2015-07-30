@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Filesystem\Filesystem;
 
 class MakeRepo extends Command
 {
@@ -21,11 +22,17 @@ class MakeRepo extends Command
     protected $description = 'Make a new Repository class.';
 
     /**
+     * @var Filesystem
+     */
+    protected $files;
+
+    /**
      * Create a new command instance.
      *
      */
-    public function __construct()
+    public function __construct(Filesystem $filesystem)
     {
+        $this->files = $filesystem;
         parent::__construct();
     }
 
@@ -48,6 +55,8 @@ class MakeRepo extends Command
     }
 
 EOT;
+
+
         $written = \Storage::put('repositories/'.$name.'Repository.php', $fileContents);
         if($written)
         {
