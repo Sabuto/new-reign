@@ -15,6 +15,8 @@
 
     Route::get('travel', ['as' => 'travel', 'uses' => 'PagesController@travelForm']);
     Route::post('travel', ['as' => 'travelPost', 'uses' => 'PagesController@travel']);
+    Route::get('vehicles', ['as' => 'vehicle', 'uses' => 'PagesController@vehicles']);
+    Route::post('vehicles', ['as' => 'vehiclePost', 'uses' => 'PagesController@vehiclePost']);
 
     Route::controllers([
         'auth'     => 'Auth\AuthController',
@@ -39,6 +41,8 @@
         Route::get('event', ['as' => 'admin.event', 'uses' => 'AdminController@event']);
         Route::post('event', ['as' => 'admin.eventStore', 'uses' => 'AdminController@storeEvent']);
         Route::get('assassination', ['as' => 'admin.assassination', 'uses' => 'AdminController@assassinationTargets']);
+        Route::get('ranks', ['as' => 'admin.ranks', 'uses' => 'AdminController@viewRanks']);
+        Route::get('vehicles', ['as' => 'admin.vehicles', 'uses' => 'AdminController@viewVehicles']);
     });
 
     Route::resource('news', 'NewsController', ['except' => 'show']);

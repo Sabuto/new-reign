@@ -42,4 +42,9 @@
         {
             return $this->userOb->find($id)->where('ass_id', $id)->get();
         }
+
+        public function getCurrentVehicle($id)
+        {
+            return $this->userOb->with('vehicle')->where('id', $id)->get();
+        }
     }

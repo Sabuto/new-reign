@@ -3,6 +3,7 @@
         <p>Location Location Location</p>
         <ul>
             <li><a href="{{route('travel')}}">Travel</a></li>
+            <li><a href="{{route('vehicle')}}">Vehicles</a></li>
         </ul>
     </div>
     <div class="menu-item">

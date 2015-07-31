@@ -83,6 +83,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->belongsTo('App\City');
     }
 
+    public function vehicle()
+    {
+        return $this->belongsTo('App\Vehicle');
+    }
+
     /**
      * Is the user an admin?
      *
