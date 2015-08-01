@@ -17,6 +17,7 @@
     Route::post('travel', ['as' => 'travelPost', 'uses' => 'PagesController@travel']);
     Route::get('vehicles', ['as' => 'vehicle', 'uses' => 'PagesController@vehicles']);
     Route::post('vehicles', ['as' => 'vehiclePost', 'uses' => 'PagesController@vehiclePost']);
+    Route::get('city', 'PagesController@inCity');
 
     Route::controllers([
         'auth'     => 'Auth\AuthController',

@@ -47,4 +47,9 @@
         {
             return $this->userOb->with('vehicle')->where('id', $id)->get();
         }
+
+        public function getUsersInCity()
+        {
+            return $this->userOb->with('rank')->where('city_id', \Auth::user()->city_id)->orderBy('rank_id', 'desc')->get();
+        }
     }

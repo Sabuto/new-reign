@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->integer('city_id')->default(1);
             $table->timestamp('crimeTime');
             $table->timestamp('travelTime');
-            $table->integer('rank_id');
+            $table->integer('rank_id')->default(1);
             $table->text('cashHand')->default(500);
             $table->text('cashBank')->default(500);
             $table->boolean('eventsRead')->default(0);

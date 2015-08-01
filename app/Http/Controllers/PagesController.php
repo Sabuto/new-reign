@@ -78,4 +78,11 @@ class PagesController extends Controller
             return redirect()->back()->withMessage($buy['message']);
         }
     }
+
+    public function inCity()
+    {
+        $users = $this->userRepository->getUsersInCity();
+
+        return view('city.inCity', compact('users'));
+    }
 }

@@ -1,15 +1,21 @@
 <?php
 
-namespace App;
+    namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Model;
 
-class Rank extends Model
-{
-    protected $fillable = ['name'];
-
-    public function vehicles()
+    class Rank extends Model
     {
-        return $this->hasMany('App\Vehicle');
+
+        protected $fillable = ['name'];
+
+        public function vehicles()
+        {
+            return $this->hasMany('App\Vehicle');
+        }
+
+        public function users()
+        {
+            return $this->hasMany('App\User');
+        }
     }
-}
