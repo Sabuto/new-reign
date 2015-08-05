@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5441f8773cea46566d15d694103e92bd",
+    "hash": "f956b4e25f005b3b5d7937820926aa31",
     "packages": [
         {
             "name": "andersonef/repositories-pattern",
@@ -1381,6 +1381,53 @@
                 "trigger"
             ],
             "time": "2015-05-13 11:01:46"
+        },
+        {
+            "name": "riari/laravel-forum",
+            "version": "2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Riari/laravel-forum.git",
+                "reference": "d9b0dae758f6e4cb38f855b6aaaf45f7afd12fd4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Riari/laravel-forum/zipball/d9b0dae758f6e4cb38f855b6aaaf45f7afd12fd4",
+                "reference": "d9b0dae758f6e4cb38f855b6aaaf45f7afd12fd4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "Riari\\Forum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Riari",
+                    "email": "hello@ricko.me"
+                }
+            ],
+            "description": "A complete forum package designed for easy integration into any Laravel 4/5 application",
+            "keywords": [
+                "discuss",
+                "forum",
+                "laravel",
+                "laravel-4",
+                "laravel-5"
+            ],
+            "time": "2015-07-25 10:03:29"
         },
         {
             "name": "swiftmailer/swiftmailer",

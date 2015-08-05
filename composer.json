@@ -13,7 +13,8 @@
         "pusher/pusher-php-server": "~2.0",
         "cmgmyr/messenger": "~2.0",
         "vinkla/pusher": "^2.0@dev",
-        "andersonef/repositories-pattern": "^1.0@dev"
+        "andersonef/repositories-pattern": "^1.0@dev",
+        "riari/laravel-forum": "~2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

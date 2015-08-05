@@ -52,4 +52,14 @@
         {
             return $this->userOb->with('rank')->where('city_id', \Auth::user()->city_id)->orderBy('rank_id', 'desc')->get();
         }
+
+        public function where($column, $deliminator, $value)
+        {
+            return $this->userOb->where($column, $deliminator, $value);
+        }
+
+        public function first()
+        {
+            return $this->userOb->firs();
+        }
     }

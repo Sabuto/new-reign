@@ -149,6 +149,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Cmgmyr\Messenger\MessengerServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
+        Riari\Forum\ForumServiceProvider::class,
 
 
     ],
