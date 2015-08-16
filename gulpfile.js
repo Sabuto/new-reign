@@ -20,7 +20,11 @@ elixir(function(mix) {
         "jquery.growl.css"
     ], "public/css/diff.css");
 
-    mix.scripts([
+    mix.coffee([
+        "timer.coffee"
+    ], "public/js/timer.js");
+
+    /*mix.scripts([
         "jquery.growl.js"
-    ], "public/js/main.js");
+    ], "public/js/main.js");*/
 });

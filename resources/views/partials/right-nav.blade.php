@@ -9,7 +9,7 @@
     <div class="menu-item">
         <p>Earn</p>
         <ul>
-            <li>Crimes</li>
+            <li><a href="{{action('CrimesController@index')}}">Crimes</a></li>
             <li><a href="{{route('hookers.index')}}">Hookers</a></li>
             <li><a href="{{route('assassination.index')}}">Assassination</a></li>
             <li>GTA</li>

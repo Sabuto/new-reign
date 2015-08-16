@@ -1,0 +1,40 @@
+{
+  "name": "jcountdown",
+  "version": "2.0.0",
+  "authors": [
+    "Tom Ellis <tellishtc@gmail.com>"
+  ],
+  "description": "jQuery Countdown Plugin",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.md",
+    "assets",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json",
+    "src",
+    "changelog.txt"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "qunit": "~1.18.0"
+  },
+  "homepage": "https://github.com/tomgrohl/jCountdown",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.0",
+    "commit": "1e3f5488412c745ee0bcc8dc886950e2781d14ad"
+  },
+  "_source": "git://github.com/tomgrohl/jCountdown.git",
+  "_target": "~2.0.0",
+  "_originalSource": "jcountdown",
+  "_direct": true
+}

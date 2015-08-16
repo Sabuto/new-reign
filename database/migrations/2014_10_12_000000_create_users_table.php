@@ -32,6 +32,8 @@ class CreateUsersTable extends Migration
             $table->boolean('admin');
             $table->integer('offence');
             $table->integer('defence');
+            $table->integer('stealth');
+            $table->integer('points');
             $table->rememberToken();
             $table->timestamps();
         });

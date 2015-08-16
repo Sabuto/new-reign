@@ -22,6 +22,6 @@ class MustBeAdmin
             return $next($request);
         }
 
-        return redirect()->back();
+        return redirect('/')->withMessage('You cannot view that page!');
     }
 }

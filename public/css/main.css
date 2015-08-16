@@ -110,6 +110,14 @@ h2 {
     background: rgba(31, 100, 200, 0.5);
     margin: 1.5rem auto 0; }
 
+.line {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 3px;
+  background: rgba(129, 204, 239, 0.94);
+  margin: 1.5rem auto 1.5rem; }
+
 .no-button {
   -webkit-appearance: none;
   outline: none;
