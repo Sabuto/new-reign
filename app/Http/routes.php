@@ -62,3 +62,10 @@
         Route::get('/', ['as' => 'assassination.index', 'uses' => 'AssassinationController@index']);
         Route::post('/', ['as' => 'assassination.kill', 'uses' => 'AssassinationController@kill']);
     });
+
+    Route::get('crimes', 'CrimesController@index');
+    Route::post('crimes', 'CrimesController@doCrime');
+    Route::get('crimes/create', 'CrimesController@create');
+    Route::post('crimes/create', ['as' => 'crimes.store', 'uses' => 'CrimesController@store']);
+    Route::get('crimes/{id}/edit', ['as' => 'crimes.edit', 'uses' => 'CrimesController@edit']);
+    Route::put('crimes/{id}', ['as' => 'crimes.update', 'uses' => 'CrimesController@update']);

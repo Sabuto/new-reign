@@ -19,18 +19,25 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	protected $table = 'users';
 
 	/**
-	 * The attributes that are mass assignable.
+	 * The attributes that are not mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password', 'state_id', 'safety_id', 'gender_id', 'loggedIn', 'lastCrime', 'crimeTime', 'travelTime', 'rank_id', 'cashHand', 'cashBank', 'admin', 'assassination_id'];
 
+    protected $guarded = ['id'];
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
+
+    /**
+     * The attributes that are to be mutated into Carbon Instances
+     * 
+     * @var array
+     */
+    protected $dates = ['created_at', 'updated_at', 'crimeTime', 'travelTime'];
 
     /**
      * Returns the hookers a user has.

@@ -5,6 +5,7 @@
 $menuColour: rgba(135, 161, 200, 0.99);
 $mainColour: rgba(67, 137, 200, 0.99);
 $barColour: rgba(31, 100, 200, 0.50);
+$lineColour: rgba(129, 204, 239, 0.94);
 
 $susy: (
         global-box-sizing: border-box,
@@ -109,6 +110,15 @@ h2 {
     background: $barColour;
     margin: 1.5rem auto 0;
   }
+}
+
+.line {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 3px;
+  background: $lineColour;
+  margin: 1.5rem auto 1.5rem;
 }
 
 .no-button {
