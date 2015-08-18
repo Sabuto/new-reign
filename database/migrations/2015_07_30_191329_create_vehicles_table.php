@@ -18,7 +18,7 @@ class CreateVehiclesTable extends Migration
             $table->bigInteger('price');
             $table->bigInteger('units');
             $table->integer('rank_id');
-            $table->string('travel_time')->default('1 day');
+            $table->string('travel_time')->default('2 hours');
             $table->timestamps();
         });
     }

@@ -21,7 +21,9 @@
         /**
          * CrimesController constructor.
          *
-         * @param $repo
+         * @param CrimesRepository $repo
+         * @param UserRepository $userRepository
+         * @param CityRepository $cityRepository
          */
         public function __construct(
             CrimesRepository $repo,
@@ -73,7 +75,7 @@
 
             $message = $this->repo->persistCrime(null, $input);
 
-            return $this->prosessPersistResponse($message);
+            return $this->processPersistResponse($message);
         }
 
         /**
@@ -105,7 +107,7 @@
 
             $message = $this->repo->persistCrime($id, $input);
 
-            return $this->prosessPersistResponse($message);
+            return $this->processPersistResponse($message);
         }
 
         /**
@@ -159,7 +161,7 @@
          *
          * @return mixed
          */
-        private function prosessPersistResponse($message)
+        private function processPersistResponse($message)
         {
             if (array_key_exists('Success', $message)) {
                 return redirect()->back()->withMessage($message['Success']);

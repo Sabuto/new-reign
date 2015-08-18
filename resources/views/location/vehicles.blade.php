@@ -10,11 +10,13 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Units</th>
+                    <th>Travel Time</th>
                 </tr>
                 <tr>
                     <td>{{$currentVehicle->name}}</td>
                     <td>&pound;{{number_format($currentVehicle->price)}}</td>
                     <td>{{$currentVehicle->units}}</td>
+                    <td>{{$currentVehicle->travel_time}}</td>
                 </tr>
             </table>
         </div>
@@ -31,6 +33,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Units</th>
+                    <th>Travel Time</th>
                     <th>Options</th>
                 </tr>
                 </thead>
@@ -40,6 +43,7 @@
                             <td>{{$vehicle->name}}</td>
                             <td>&pound;{{number_format($vehicle->price)}}</td>
                             <td>{{number_format($vehicle->units)}}</td>
+                            <td>{{$vehicle->travel_time}}</td>
                             <td>{!! Form::radio('vehicle', $vehicle->id) !!}</td>
                         </tr>
                     @endforeach

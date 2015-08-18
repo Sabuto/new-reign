@@ -4,7 +4,9 @@
 
     use App\City;
     use App\User;
+    use App\Vehicle;
     use Auth;
+    use Carbon\Carbon;
 
     class PagesRepository
     {
@@ -17,6 +19,8 @@
 
         protected $user;
 
+        protected $vehicle;
+
         /**
          * PagesRepository constructor.
          *
@@ -24,9 +28,10 @@
          *
          * @internal param $travel
          */
-        public function __construct(City $cities)
+        public function __construct(City $cities, Vehicle $vehicle)
         {
             $this->cities = $cities;
+            $this->vehicle = $vehicle;
         }
 
         /**
@@ -53,15 +58,16 @@
                 return $this->cities->where('id', '!=', Auth::user()->city_id)->get();
             }
         }
-
+        
         /**
          * @param $cityId
          *
          * @return array
          */
-        public function handleTravel($cityId)
+        public function handleTravel($cityId, $vehicleId)
         {
             $city = $this->cities->find($cityId);
+            $vehicle = $this->vehicle->find($vehicleId, ['travel_time']);
             if (Auth::user()->city_id == $cityId) {
                 return ['error' => 'You cannot travel to the city you are already in.'];
             }
@@ -70,8 +76,12 @@
                 return ['error' => 'You cannot afford to travel there.'];
             }
 
+            $now = Carbon::now();
+            $nextTravel = $now->modify($vehicle->travel_time);
+
             $user           = User::find(Auth::id());
             $user->cashHand = $user->cashHand - $city->cost;
+            $user->travelTime = $nextTravel;
             $user->city()->associate($city);
             $user->save();
 

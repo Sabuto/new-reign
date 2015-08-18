@@ -57,6 +57,10 @@
         {
             return $this->userOb->where('id', $id)->first(['crimeTime']);
         }
+        public function getTravelTimer($id)
+        {
+            return $this->userOb->where('id', $id)->first(['travelTime']);
+        }
 
         public function where($column, $deliminator, $value)
         {

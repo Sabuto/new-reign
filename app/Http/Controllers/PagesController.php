@@ -43,13 +43,14 @@ class PagesController extends Controller
     public function travelForm()
     {
         $cities = $this->pagesRepository->getTravelableCities(Auth::user()->isAdmin());
+        $timer = $this->userRepository->getTravelTimer(Auth::id());
 
-        return view('location.travel', compact('cities'));
+        return view('location.travel', compact('cities', 'timer'));
     }
 
     public function travel(Request $request)
     {
-        $travel = $this->pagesRepository->handleTravel($request->input('city'));
+        $travel = $this->pagesRepository->handleTravel($request->input('city'), Auth::user()->vehicle_id);
 
         if (array_key_exists('error', $travel)) {
             return redirect()->back()->withMessage($travel['error']);
